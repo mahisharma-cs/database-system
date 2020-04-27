@@ -1,0 +1,333 @@
+<!--?xml version="1.0" encoding="UTF-8"?-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-us" style="" class="applicationcache geolocation history postmessage svg websockets localstorage sessionstorage no-websqldatabase webworkers hashchange no-pointerevents canvas audio canvastext video webgl cssgradients multiplebgs opacity rgba inlinesvg hsla supports svgclippaths smil no-touchevents fontface generatedcontent textshadow cssanimations backgroundsize borderimage borderradius boxshadow csscolumns csscolumns-width no-csscolumns-span csscolumns-fill csscolumns-gap csscolumns-rule csscolumns-rulecolor csscolumns-rulestyle csscolumns-rulewidth no-csscolumns-breakbefore no-csscolumns-breakafter no-csscolumns-breakinside flexbox flexboxlegacy no-cssreflections csstransforms csstransforms3d csstransitions indexeddb indexeddb-deletedatabase js ibm-v18 ibm-cxtype-na no-hires win firefox firefox6 gecko gecko6 ibm-grid-medium ibm-background-white-core" lang="en-us"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="security" content="public">
+<meta name="Robots" content="index,follow">
+<meta name="DC.Type" content="reference">
+<meta name="DC.Title" content="GRANT (database authorities) statement">
+<meta name="DC.subject" content="packages, authority to create, databases, accessing, granting authority, tables, creating, schemas, implicit, implicit schemas, GRANT (database authorities) statement, DBADM (database administration) authority, granting, database authorities, GRANT (database authorities) statement, loading, granting database authority, SECADM (security administrator) authority, GRANT statement, SQL statements, GRANT, database authorities, authorizations, granting control, database operations">
+<meta name="keywords" content="packages, authority to create, databases, accessing, granting authority, tables, creating, schemas, implicit, implicit schemas, GRANT (database authorities) statement, DBADM (database administration) authority, granting, database authorities, GRANT (database authorities) statement, loading, granting database authority, SECADM (security administrator) authority, GRANT statement, SQL statements, GRANT, database authorities, authorizations, granting control, database operations">
+<meta name="DC.Relation" scheme="URI" content="../doc/r0000961.html">
+<meta name="DC.Relation" scheme="URI" content="../doc/r0000962.html">
+<meta name="DC.Relation" scheme="URI" content="../doc/r0007699.html">
+<meta name="DC.Relation" scheme="URI" content="../doc/r0000964.html">
+<meta name="DC.Relation" scheme="URI" content="../doc/r0004202.html">
+<meta name="DC.Relation" scheme="URI" content="../doc/r0002174.html">
+<meta name="DC.Relation" scheme="URI" content="../doc/r0000966.html">
+<meta name="DC.Relation" scheme="URI" content="../doc/r0003304.html">
+<meta name="copyright" content="© Copyright IBM Corporation 1993, 2014">
+<meta name="DC.Rights.Owner" content="© Copyright IBM Corporation 1993, 2014">
+<meta name="DC.Date" scheme="iso8601" content="2014-10-29">
+<meta name="DC.Date.Modified" content="2014-10-29">
+<meta name="DC.Format" content="XHTML">
+<meta name="DC.Identifier" content="r0000958">
+<meta name="DC.Language" content="en-us">
+<meta name="IBM.Country" content="ZZ">
+<!-- Licensed Materials - Property of IBM -->
+<!-- US Government Users Restricted Rights -->
+<!-- Use, duplication or disclosure restricted by -->
+<!-- GSA ADP Schedule Contract with IBM Corp. -->
+
+
+<title>GRANT (database authorities) - IBM DB2 9.7 for Linux, UNIX, and Windows</title>
+<script type="text/javascript">
+window.digitalData = {page: {pageInfo: {ibm: {config: {coremodules: {enabled: false}, survey: {global_percent: 0}}}}}};
+window.kcTranslations = {'content.copy': 'Copy', 'content.playpausegif': 'Play or pause animated image $IMGNAME$'};
+</script>
+
+<!-- NLS_CHARSET=UTF-8 -->
+	<script type="text/javascript" src="r0000958_data/luw-footer-text.js"><!-- --></script>
+	<script type="text/javascript" src="r0000958_data/luw-footer.js"><!--  --></script>
+
+<link type="text/css" href="www.css" rel="stylesheet">
+<link type="text/css" href="r0000958_data/tables.css" rel="stylesheet">
+<link type="text/css" href="grid-fluid.css" rel="stylesheet">
+<link type="text/css" href="r0000958_data/content_northstar_styles.css" rel="stylesheet">
+<script type="text/javascript" charset="utf-8" src="r0000958_data/www.js"></script><style></style>
+<script type="text/javascript" charset="utf-8" src="r0000958_data/tables.js"></script>
+<script type="text/javascript" charset="utf-8" src="r0000958_data/dyntabs.js"></script>
+<script type="text/javascript" charset="utf-8" src="r0000958_data/libgif.js"></script><script type="text/javascript" charset="utf-8" src="r0000958_data/content_northstar_main.js"></script>
+<link type="text/css" href="r0000958_data/globaltopic.css" rel="stylesheet"><script type="text/javascript" charset="utf-8" src="r0000958_data/globaltopic.js"></script><link type="text/css" href="r0000958_data/spinner.css" rel="stylesheet"></head>
+<body id="r0000958" class="ibm-type ibm-background-white-core" clickeventadded="true"><div id="ibm-top"><div id="ibm-content-wrapper"><main>
+<!-- NLS_CHARSET=UTF-8 --><div>
+<!-- DB2 topics header v1.5 -->
+<span class="runningheader"><img src="r0000958_data/IC-im-sm.gif" alt="" align="top" width="13" height="13" border="0">
+<strong>DB2 Version 9.7 for Linux, UNIX, and Windows</strong></span>
+
+<hr style="width: 100%">
+<script type="text/javascript">checkUpdate();</script><div id="welcomeMessage" style="background-color:#F3F781;font-size:85%;margin: 10px;padding: 10px;"><a href="https://www.ibm.com/support/knowledgecenter/SSEPGG_9.7.0/com.ibm.db2.luw.sql.ref.doc/doc/r0000958.html?view=kc#" style="text-decoration:none;float:right;" onclick="setCookie();"> ╳ </a><br <br=""><p>Welcome to IBM Knowledge Center</p> <p>IBM
+ Knowledge Center is the new, comprehensive home for IBM product 
+documentation. For getting started and customization information, as 
+well as links to other IBM resources, see the <a href="javascript:void%20window.open('http://www.ibm.com/support/knowledgecenter/',%20'Info%20about%20IBM%20Knowledge%20Center',%20'menubar=no,%20toolbar=no,%20resizable=yes,%20scrollbars=yes,%20height=720,%20width=860,%20left=50,%20top=50')">IBM Knowledge Center welcome page.</a> For more details on the differences between the former IBM Information Centers and the new IBM Knowledge Center, see <a href="javascript:void%20window.open('https://www.ibm.com/connections/blogs/techcontent/entry/from_ibm_information_centers_to_ibm_knowledge_center?lang=en_us',%20'Info%20about%20IBM%20Knowledge%20Center',%20'menubar=no,%20toolbar=no,%20resizable=yes,%20scrollbars=yes,%20height=720,%20width=860,%20left=50,%20top=50')">From IBM Information Centers to IBM Knowledge Center</a> and <a href="javascript:void%20window.open('https://www.ibm.com/connections/blogs/techcontent/entry/some_recent_questions_about_ibm_knowledge_center?lang=en_us',%20'Info%20about%20IBM%20Knowledge%20Center',%20'menubar=no,%20toolbar=no,%20resizable=yes,%20scrollbars=yes,%20height=720,%20width=860,%20left=50,%20top=50')">Some recent questions about IBM Knowledge Center.</a></p><br><br></div>
+<!-- End of DB2 topics header -->
+</div>
+<h1 class="title topictitle1 kc-topic-title ibm-h2" style="display: none;">GRANT (database authorities) <span class="ph">statement</span></h1>
+<div class="body refbody"><div class="section"> <p class="p">This form of the GRANT statement grants authorities that
+apply to the entire database (rather than privileges that apply to
+specific objects within the database).</p>
+</div>
+<div class="section"><h2 class="title sectiontitle ibm-h3 ibm-padding-top-1">Invocation</h2> <p class="p">This statement can be embedded
+in an application program or issued through the use of dynamic SQL
+statements. It is an executable statement that can be dynamically
+prepared only if DYNAMICRULES run behavior is in effect for the package
+(SQLSTATE 42509).</p>
+</div>
+<div class="section"><h2 class="title sectiontitle ibm-h3 ibm-padding-top-1">Authorization</h2> <p class="p">To grant ACCESSCTRL, DATAACCESS,
+DBADM, or <span class="ph">SECADM</span> authority,
+SECADM authority is required. To grant other authorities ACCESSCTRL
+or SECADM authority is required.</p>
+</div>
+<div class="section"><h2 class="title sectiontitle ibm-h3 ibm-padding-top-1">Syntax</h2> <pre class="fig syntaxdiagram"><span><img src="r0000958_data/c.gif" alt="Read syntax diagram" longdesc="r0000958syn1.html" border="0"></span><a href="https://www.ibm.com/support/knowledgecenter/SSEPGG_9.7.0/com.ibm.db2.luw.sql.ref.doc/doc/r0000958.html?view=kc#d254838e134"><img src="r0000958_data/c.gif" alt="Skip visual syntax diagram" border="0"></a>
+&gt;&gt;-GRANT--------------------------------------------------------&gt;
+
+&nbsp;&nbsp;&nbsp;.-,------------------------------------------------------------------.&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;V                                                                    |&nbsp;&nbsp;&nbsp;
+&gt;----+-ACCESSCTRL-----------------------------------------------------+-+--&gt;
+&nbsp;&nbsp;&nbsp;  +-BINDADD--------------------------------------------------------+  &nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;  +-CONNECT--------------------------------------------------------+  &nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;  +-CREATETAB------------------------------------------------------+  &nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;  +-CREATE_EXTERNAL_ROUTINE----------------------------------------+  &nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;  +-CREATE_NOT_FENCED_ROUTINE--------------------------------------+  &nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;  +-DATAACCESS-----------------------------------------------------+  &nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;  |           .-WITH DATAACCESS----.     .-WITH ACCESSCTRL----.    |  &nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;  +-DBADM--•--+--------------------+--•--+--------------------+--•-+  &nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;  |           '-WITHOUT DATAACCESS-'     '-WITHOUT ACCESSCTRL-'    |  &nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;  +-EXPLAIN--------------------------------------------------------+  &nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;  +-IMPLICIT_SCHEMA------------------------------------------------+  &nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;  +-LOAD-----------------------------------------------------------+  &nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;  +-QUIESCE_CONNECT------------------------------------------------+  &nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;  +-SECADM---------------------------------------------------------+  &nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;  +-SQLADM---------------------------------------------------------+  &nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;  '-WLMADM---------------------------------------------------------'  &nbsp;&nbsp;&nbsp;
+
+&nbsp;&nbsp;&nbsp;                 .-,---------------------------------.&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;                 V                                   |&nbsp;&nbsp;&nbsp;
+&gt;--ON DATABASE--TO----+-+-------+--<em>authorization-name</em>-+-+------&gt;&lt;
+&nbsp;&nbsp;&nbsp;                   | +-USER--+                     |  &nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;                   | +-GROUP-+                     |  &nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;                   | '-ROLE--'                     |  &nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;                   '-PUBLIC------------------------'  &nbsp;&nbsp;&nbsp;
+
+</pre><a name="d254838e134"><!-- --></a></div>
+<div class="section"><h2 class="title sectiontitle ibm-h3 ibm-padding-top-1">Description</h2> <dl class="dl parml ibm-padding-top-1"><dt class="dt pt dlterm">ACCESSCTRL</dt>
+<dd class="dd pd">Grants the access control authority. The ACCESSCTRL authority
+allows the holder to:<ul class="ul ibm-colored-list ibm-textcolor-gray-80"><li class="li"><img alt="Start of change" src="r0000958_data/delta.gif" style="display: none;"><span style="margin-left: 1px;" class="ibm-icon-nolink ibm-lastpage-link" title="Start of change" alt="Start of change">&nbsp;</span>Grant and revoke the following database authorities: BINDADD, CONNECT, CREATETAB,
+CREATE_EXTERNAL_ROUTINE, CREATE_NOT_FENCED_ROUTINE, EXPLAIN, IMPLICIT_SCHEMA, LOAD, QUIESCE_CONNECT,
+SQLADM, WLMADM<span style="margin-left: 5px;" class="ibm-icon-nolink ibm-firstpage-link" title="End of change" alt="End of change">&nbsp;</span><img alt="End of change" src="r0000958_data/deltaend.gif" style="display: none;"></li>
+<li class="li">Grant and revoke all object level privileges</li>
+</ul>
+The ACCESSCTRL authority cannot be granted to PUBLIC (SQLSTATE
+42508).</dd>
+<dt class="dt pt dlterm">BINDADD </dt>
+<dd class="dd pd">Grants the authority to create packages. The creator of a package
+automatically has the CONTROL privilege on that package and retains
+this privilege even if the BINDADD authority is subsequently revoked. </dd>
+<dt class="dt pt dlterm">CONNECT</dt>
+<dd class="dd pd">Grants the authority to access the database.</dd>
+<dt class="dt pt dlterm">CREATETAB </dt>
+<dd class="dd pd">Grants the authority to create base tables. The creator of a base
+table automatically has the CONTROL privilege on that table.  The
+creator retains this privilege even if the CREATETAB authority is
+subsequently revoked.  <p class="p">There is no explicit authority required
+for view creation. A view can be created at any time if the authorization
+ID of the statement used to create the view has either CONTROL or
+SELECT privilege on each base table of the view.</p>
+</dd>
+<dt class="dt pt dlterm">CREATE_EXTERNAL_ROUTINE</dt>
+<dd class="dd pd">Grants the authority to register external routines. Care must
+be taken that routines so registered will not have adverse side effects.
+(For more information, see the description of the THREADSAFE clause
+on the CREATE or ALTER routine statements.)  <p class="p">Once an external routine
+has been registered, it continues to exist, even if CREATE_EXTERNAL_ROUTINE
+is subsequently revoked.</p>
+</dd>
+<dt class="dt pt dlterm">CREATE_NOT_FENCED_ROUTINE</dt>
+<dd class="dd pd">Grants the authority to register routines that execute in the
+database manager's process. Care must be taken that routines so registered
+will not have adverse side effects. (For more information, see the
+description of the FENCED clause on the CREATE or ALTER routine statements.)
+ <p class="p">Once a routine has been registered as not fenced, it continues
+to run in this manner, even if CREATE_NOT_FENCED_ROUTINE is subsequently
+revoked.</p>
+  <p class="p">CREATE_EXTERNAL_ROUTINE is automatically granted
+to an <span class="ph synph"><span class="ph var ibm-item-note-alternate">authorization-name</span></span> that is granted
+CREATE_NOT_FENCED_ROUTINE authority.</p>
+</dd>
+<dt class="dt pt dlterm">DATAACCESS</dt>
+<dd class="dd pd">Grants the authority to access data. The DATAACCESS authority
+allows the holder to:<ul class="ul ibm-colored-list ibm-textcolor-gray-80"><li class="li">Select, insert, update, delete, and load data</li>
+<li class="li">Execute any package</li>
+<li class="li">Execute any routine (except audit routines)</li>
+</ul>
+The DATAACCESS authority cannot be granted to PUBLIC (SQLSTATE
+42508).</dd>
+<dt class="dt pt dlterm">DBADM</dt>
+<dd class="dd pd">Grants
+the database administrator authority. A database administrator <span class="ph">holds
+nearly all privileges on</span> nearly all objects in the database.
+The only exceptions are those privileges that are part of the access
+control, data access, and security administrator authorities. DBADM
+cannot be granted to PUBLIC.</dd>
+<dt class="dt pt dlterm">EXPLAIN</dt>
+<dd class="dd pd">Grants the authority to explain statements. The EXPLAIN authority
+allows the holder to explain, prepare, and describe dynamic and static
+SQL statements without requiring access to data.</dd>
+<dt class="dt pt dlterm">IMPLICIT_SCHEMA</dt>
+<dd class="dd pd">Grants the authority to implicitly create a schema.</dd>
+<dt class="dt pt dlterm">LOAD</dt>
+<dd class="dd pd"> Grants the authority to load in this database. This authority
+gives a  user the right to use the LOAD utility in this database.
+DATAACCESS and DBADM also have this authority by default. However,
+if a user only has  LOAD authority (not DATAACCESS), the user is also
+required to have  table-level privileges. In addition to LOAD privilege,
+the user is required  to have:  <ul class="ul ibm-colored-list ibm-textcolor-gray-80"><li class="li">INSERT privilege on the table for LOAD with mode INSERT, TERMINATE
+(to terminate a previous LOAD INSERT), or RESTART (to restart a previous
+LOAD INSERT)</li>
+<li class="li">INSERT and DELETE privilege on the table for LOAD with mode REPLACE,
+TERMINATE (to terminate a previous LOAD REPLACE), or RESTART (to restart
+a previous LOAD REPLACE)</li>
+<li class="li">INSERT privilege on the exception table, if such a table is used
+as  part of LOAD</li>
+</ul>
+</dd>
+<dt class="dt pt dlterm">QUIESCE_CONNECT</dt>
+<dd class="dd pd">Grants the authority to access the database while it is quiesced.</dd>
+<dt class="dt pt dlterm">SECADM</dt>
+<dd class="dd pd">Grants the security administrator authority. The authority allows
+the holder to: <ul class="ul ibm-colored-list ibm-textcolor-gray-80"><li class="li">Create and drop security objects such as <span class="ph">audit policies,</span> <span class="ph">roles,</span> security
+labels, security label components, security policies<span class="ph">, and trusted
+contexts</span></li>
+<li class="li">Grant and revoke authorities, exemptions, privileges, <span class="ph">roles</span>,
+and security labels</li>
+<li class="li">Grant and revoke the SETSESSIONUSER privilege</li>
+<li class="li">Execute TRANSFER OWNERSHIP on objects owned by others</li>
+</ul>
+The SECADM authority cannot be granted to PUBLIC (SQLSTATE 42508).</dd>
+<dt class="dt pt dlterm">SQLADM</dt>
+<dd class="dd pd">Grants the authority to manage SQL statement execution. The SQLADM
+authority allows the holder to:<ul class="ul ibm-colored-list ibm-textcolor-gray-80"><li class="li">Create, drop, flush, and set event monitors</li>
+<li class="li">Explain, prepare, and describe dynamic and static SQL statements
+without requiring access to data</li>
+<li class="li">Flush optimization profile cache</li>
+<li class="li">Flush package cache</li>
+<li class="li">Execute the runstats utility</li>
+</ul>
+</dd>
+<dt class="dt pt dlterm">WLMADM</dt>
+<dd class="dd pd">Grants the authority to manage workloads. The WLMADM authority
+allows the holder to:<ul class="ul ibm-colored-list ibm-textcolor-gray-80"><li class="li">Create, drop, and alter service classes, work action sets, work
+class sets, or workloads.</li>
+</ul>
+</dd>
+<dt class="dt pt dlterm">TO</dt>
+<dd class="dd pd">Specifies to whom the authorities are granted.  <dl class="dl parml ibm-padding-top-1"><dt class="dt pt dlterm">USER</dt>
+<dd class="dd pd">Specifies that the <span class="ph synph"><span class="ph var ibm-item-note-alternate">authorization-name</span></span> identifies
+a user.</dd>
+<dt class="dt pt dlterm">GROUP</dt>
+<dd class="dd pd">Specifies that the <span class="ph synph"><span class="ph var ibm-item-note-alternate">authorization-name</span></span> identifies
+a group name.</dd>
+<dt class="dt pt dlterm">ROLE</dt>
+<dd class="dd pd">Specifies that the <span class="ph synph"><span class="ph var ibm-item-note-alternate">authorization-name</span></span> identifies
+a role name. The role name must exist at the current server (SQLSTATE
+42704).</dd>
+<dt class="dt pt dlterm"><span class="ph synph"><span class="ph var ibm-item-note-alternate">authorization-name,...</span></span> </dt>
+<dd class="dd pd">Lists the authorization IDs of one or more users, groups, <span class="ph">or
+roles</span>.  <p class="p">The list of authorization IDs cannot include the authorization
+ID of the user issuing the statement (SQLSTATE 42502).</p>
+</dd>
+<dt class="dt pt dlterm">PUBLIC </dt>
+<dd class="dd pd">Grants the authorities to a set of users (authorization IDs).
+For more information, see <span class="q">"Authorization, privileges and object
+ownership"</span>.</dd>
+</dl>
+</dd>
+</dl>
+</div>
+<div class="section"><h2 class="title sectiontitle ibm-h3 ibm-padding-top-1">Rules</h2> <ul class="ul ibm-colored-list ibm-textcolor-gray-80"><li class="li">For each <var class="keyword varname ibm-item-note-alternate">authorization-name</var> specified, if neither
+USER, GROUP, nor ROLE is specified, then:<ul class="ul ibm-colored-list ibm-textcolor-gray-80"><li class="li">If the security plug-in in effect for the instance cannot determine
+the status of the <var class="keyword varname ibm-item-note-alternate">authorization-name</var>, an error
+is returned (SQLSTATE 56092).</li>
+<li class="li">If the <var class="keyword varname ibm-item-note-alternate">authorization-name</var> is defined as ROLE
+in the database, and as either GROUP or USER <span class="ph">according to the
+security plug-in in effect</span>, an error is returned (SQLSTATE 56092).</li>
+<li class="li">If the <var class="keyword varname ibm-item-note-alternate">authorization-name</var> is defined <span class="ph">according
+to the security plug-in in effect</span> as both USER and GROUP, an
+error is returned (SQLSTATE 56092).</li>
+<li class="li">If the <var class="keyword varname ibm-item-note-alternate">authorization-name</var> is defined <span class="ph">according
+to the security plug-in in effect</span> as USER only, or if it is undefined,
+USER is assumed.</li>
+<li class="li">If the <var class="keyword varname ibm-item-note-alternate">authorization-name</var> is defined <span class="ph">according
+to the security plug-in in effect</span> as GROUP only, GROUP is assumed.</li>
+<li class="li">If the <var class="keyword varname ibm-item-note-alternate">authorization-name</var> is defined <span class="ph">in
+the database</span> as ROLE only, ROLE is assumed.</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section"><h2 class="title sectiontitle ibm-h3 ibm-padding-top-1">Notes</h2> <ul class="ul ibm-colored-list ibm-textcolor-gray-80"><li class="li"><span class="ph">ACCESSCTRL,
+DATAACCESS, DBADM, or SECADM authorities cannot be granted to the
+special group PUBLIC. Therefore, granting ACCESSCTRL, DBADM, DATAACCESS,
+or SECADM authority to a role <var class="keyword varname ibm-item-note-alternate">role-name</var> fails if <var class="keyword varname ibm-item-note-alternate">role-name</var> is
+granted to PUBLIC either directly or indirectly (SQLSTATE 42508).</span> <ul class="ul ibm-colored-list ibm-textcolor-gray-80"><li class="li">Role <var class="keyword varname ibm-item-note-alternate">role-name</var> is granted directly to PUBLIC
+if the following statement has been issued:<pre class="pre codeblock ibm-textcolor-default ibm-background-neutral-white-40"><code data-clipboard-id="codeblock0">   <strong class="ph b">GRANT ROLE</strong> <var class="keyword varname ibm-item-note-alternate">role-name</var> <strong class="ph b">TO PUBLIC</strong></code><a href="javascript:void(0);" id="copy-btn-0" class="copy-to-clipboard-btn"><img src="r0000958_data/copy.png" title="Copy" alt="Copy" width="26" height="26"></a></pre>
+</li>
+<li class="li">Role <var class="keyword varname ibm-item-note-alternate">role-name</var> is granted indirectly to PUBLIC
+if the following statements have been issued:<pre class="pre codeblock ibm-textcolor-default ibm-background-neutral-white-40"><code data-clipboard-id="codeblock1">   <strong class="ph b">GRANT ROLE</strong> <var class="keyword varname ibm-item-note-alternate">role-name</var> <strong class="ph b">TO ROLE</strong> <var class="keyword varname ibm-item-note-alternate">role-name2</var>
+   <strong class="ph b">GRANT ROLE</strong> <var class="keyword varname ibm-item-note-alternate">role-name2</var> <strong class="ph b">TO PUBLIC</strong></code><a href="javascript:void(0);" id="copy-btn-1" class="copy-to-clipboard-btn"><img src="r0000958_data/copy.png" title="Copy" alt="Copy" width="26" height="26"></a></pre>
+</li>
+</ul>
+</li>
+<li class="li"><span class="ph"><strong class="ph b"><em class="ph i">Syntax alternatives</em></strong>: The following
+are supported for compatibility with previous versions of DB2® and with other database products. </span><ul class="ul ibm-colored-list ibm-textcolor-gray-80"><li class="li">CREATE_NOT_FENCED can be specified in place of CREATE_NOT_FENCED_ROUTINE</li>
+<li class="li">SYSTEM can be specified in place of DATABASE</li>
+</ul>
+</li>
+<li class="li"><strong class="ph b"><em class="ph i">Privileges granted to a group</em></strong>: A privilege
+that is granted to a group is not used for authorization checking
+on: <ul class="ul ibm-colored-list ibm-textcolor-gray-80"><li class="li">Static DML statements in a package</li>
+<li class="li">A base table while processing a CREATE VIEW statement</li>
+<li class="li">A base table while processing a CREATE TABLE statement for a materialized
+query table</li>
+<li class="li">Create SQL routine</li>
+<li class="li">Create trigger</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section"><h2 class="title sectiontitle ibm-h3 ibm-padding-top-1">Examples</h2> <div class="p ibm-padding-bottom-1"><em class="ph i">Example 1:</em>&nbsp; Give the users
+WINKEN, BLINKEN, and NOD the authority to connect to the database.
+ <pre class="pre codeblock ibm-textcolor-default ibm-background-neutral-white-40"><code data-clipboard-id="codeblock2">   <strong class="ph b">GRANT CONNECT ON DATABASE TO USER</strong> WINKEN, <strong class="ph b">USER</strong> BLINKEN, <strong class="ph b">USER</strong> NOD</code><a href="javascript:void(0);" id="copy-btn-2" class="copy-to-clipboard-btn"><img src="r0000958_data/copy.png" title="Copy" alt="Copy" width="26" height="26"></a></pre>
+</div>
+ <div class="p ibm-padding-bottom-1"><em class="ph i">Example
+2:</em>&nbsp; Grant BINDADD authority on the database to a group named D024.
+There is both a group and a user called D024 in the system.  <pre class="pre codeblock ibm-textcolor-default ibm-background-neutral-white-40"><code data-clipboard-id="codeblock3">   <strong class="ph b">GRANT BINDADD ON DATABASE TO GROUP</strong> D024</code><a href="javascript:void(0);" id="copy-btn-3" class="copy-to-clipboard-btn"><img src="r0000958_data/copy.png" title="Copy" alt="Copy" width="26" height="26"></a></pre>
+</div>
+ <p class="p">Observe
+that, the GROUP keyword must be specified; otherwise, an error will
+occur since both a user and a group named D024 exist. Any member of
+the D024 group will be allowed to bind packages in the database, but
+the D024 user will not be allowed (unless this user is also a member
+of the group D024, had been granted BINDADD authority previously,
+or BINDADD authority had been granted to another group of which D024
+was a member).</p>
+ <div class="p ibm-padding-bottom-1"><em class="ph i">Example 3:</em>&nbsp; Give user Walid security
+administrator authority. <pre class="pre codeblock ibm-textcolor-default ibm-background-neutral-white-40"><code data-clipboard-id="codeblock4">   <strong class="ph b">GRANT SECADM ON DATABASE TO USER</strong> Walid</code><a href="javascript:void(0);" id="copy-btn-4" class="copy-to-clipboard-btn"><img src="r0000958_data/copy.png" title="Copy" alt="Copy" width="26" height="26"></a></pre>
+</div>
+</div>
+</div>
+<div class="related-links ibm-padding-top-1 ibm-padding-bottom-2" style="overflow: auto;"><div class="relinfo relref ibm-col-1-1 margin-bottom-1" style="list-style: outside none none; width: 100%;"><strong>Related reference</strong>:<br>
+<div><div class="ibm-ind-link"><a class="link ibm-forward-link" href="https://www.ibm.com/support/knowledgecenter/SSEPGG_9.7.0/com.ibm.db2.luw.sql.ref.doc/doc/r0000961.html?view=kc">GRANT (index privileges) statement</a></div></div>
+<div><div class="ibm-ind-link"><a class="link ibm-forward-link" href="https://www.ibm.com/support/knowledgecenter/SSEPGG_9.7.0/com.ibm.db2.luw.sql.ref.doc/doc/r0000962.html?view=kc">GRANT (package privileges) statement</a></div></div>
+<div><div class="ibm-ind-link"><a class="link ibm-forward-link" href="https://www.ibm.com/support/knowledgecenter/SSEPGG_9.7.0/com.ibm.db2.luw.sql.ref.doc/doc/r0007699.html?view=kc">GRANT (routine privileges) statement</a></div></div>
+<div><div class="ibm-ind-link"><a class="link ibm-forward-link" href="https://www.ibm.com/support/knowledgecenter/SSEPGG_9.7.0/com.ibm.db2.luw.sql.ref.doc/doc/r0000964.html?view=kc">GRANT (schema privileges) statement</a></div></div>
+<div><div class="ibm-ind-link"><a class="link ibm-forward-link" href="https://www.ibm.com/support/knowledgecenter/SSEPGG_9.7.0/com.ibm.db2.luw.sql.ref.doc/doc/r0004202.html?view=kc">GRANT (sequence privileges) statement</a></div></div>
+<div><div class="ibm-ind-link"><a class="link ibm-forward-link" href="https://www.ibm.com/support/knowledgecenter/SSEPGG_9.7.0/com.ibm.db2.luw.sql.ref.doc/doc/r0002174.html?view=kc">GRANT (server privileges) statement</a></div></div>
+<div><div class="ibm-ind-link"><a class="link ibm-forward-link" href="https://www.ibm.com/support/knowledgecenter/SSEPGG_9.7.0/com.ibm.db2.luw.sql.ref.doc/doc/r0000966.html?view=kc">GRANT (table, view, or nickname privileges) statement</a></div></div>
+<div><div class="ibm-ind-link"><a class="link ibm-forward-link" href="https://www.ibm.com/support/knowledgecenter/SSEPGG_9.7.0/com.ibm.db2.luw.sql.ref.doc/doc/r0003304.html?view=kc">GRANT (table space privileges) statement</a></div></div>
+</div>
+</div><!-- NLS_CHARSET=UTF-8 --><div>
+	<script type="text/javascript">showFooter(' ');</script><img src="r0000958_data/reference_obj.gif" alt="" width="16" height="16"> <strong>Reference topic</strong>
+</div>
+<script type="text/javascript">var _cf = _cf || []; _cf.push(['_setFsp', true]);  _cf.push(['_setBm', true]); _cf.push(['_setAu', '/assets/4e820bb8206b4d21439d18653f6d']); </script><script type="text/javascript" src="4e820bb8206b4d21439d18653f6d"></script>
+<div id="ibm-overlay-backdrop"></div></main></div></div></body></html>
